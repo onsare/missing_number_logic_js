@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jasmine Spec Runner</title>
+    <link rel="stylesheet" href="../bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+  </head>
+  <body>
+    <script src="../bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="../bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
+
+    <!-- include source files here... -->
+	<script>
+	function findMissing(arr1, arr2){
+
+		var	isMissing = 0;
+
+		for (var i=0; i < arr2.length; i++ ) {
+			isMatch = false;
+			for ( var j = 0; j < arr1.length; j++ ) {
+				if (arr2[i] == arr1[j]){
+				isMatch = true;
+				}
+			}
+			if ( !isMatch ){
+			//assign what is missing in arr2 to  isMissing
+			isMissing = arr2[i];
+			
+			}
+		}
+    return isMissing;
+	
+	}
+	
+	
+	
+	</script>
+
+    <!-- include spec files here... -->
+    <script src="spec/test.js"></script>
+  </body>
+</html>
